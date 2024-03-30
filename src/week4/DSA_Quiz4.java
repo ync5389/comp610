@@ -9,6 +9,7 @@ class Node {
         data = c;
         next = null;
     }
+
 }
 
 public class DSA_Quiz4 {
@@ -30,17 +31,10 @@ public class DSA_Quiz4 {
             
             test.next = head;
             head = test;
-            // System.err.println(c + "*");
-
-            // Queue<E> test = new Queue<>(c);
-            // test.next = head;
-            // head = test;
         }
         
-        // Stack<Character> stack = new Stack<>();
         StringBuilder stack = new StringBuilder();
 
-        // stack.push(head.data);
         while(head != null){
             stack.append(head.data);
             head = head.next;
