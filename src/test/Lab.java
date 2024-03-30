@@ -1,5 +1,6 @@
 package test;
 
+import java.util.Random;
 import java.util.Scanner;
 
 class Node {
@@ -15,22 +16,24 @@ public class Lab {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int user = scanner.nextInt();
+        Random ran = new Random(10);
 
-        
-        Node record = new Node(1);
-        record.next = new Node(1);
-        record.next.next = new Node(1);
+        int prog = ran.ints(1, 1000).findFirst().getAsInt();
+        while(true){
+            int user = scanner.nextInt();
+            Node current = new Node(user);
 
-        Node current = new Node(user);
-        System.out.println(current.data + "XxxxxxX");
-        
-        while (record != null) { 
-            System.out.println("yy");
-            record = record.next;
+            if(current.data == prog){
+                System.err.println("y");
+            } else if(current.data < prog){
+                System.err.println("h");
+            } else {
+                System.err.println("l");
+            }
         }
-        System.out.println(record.data + "XxxxxxX");
-            record.next = current;
+        
+
+
 
         
 
